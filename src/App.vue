@@ -1,32 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <app-header />
+    <dark-coffe />
+    <cold-coffee />
+    <hot-coffee />
+    <!-- <gift-coffee /> -->
+    <!-- <about-us /> -->
+    <!-- <customer-reviews /> -->
+    <!-- <our-pranches /> -->
+    <!-- <end-footer /> -->
     <router-view />
   </div>
 </template>
 
+<script>
+import AppHeader from "@/components/global/AppHeader.vue";
+import DarkCoffe from "@/components/global/DarkCoffe.vue";
+import ColdCoffee from "@/components/global/ColdCoffee.vue";
+import HotCoffee from "@/components/global/HotCoffee.vue";
+// import GiftCoffee from "@/components/global/GiftCoffee.vue";
+// import AboutUs from "@/components/global/AboutUs.vue";
+// import CustomerReviews from "@/components/global/CustomerReviews.vue";
+// import OurPranches from "@/components/global/OurPranches.vue";
+// import EndFooter from "@/components/global/EndFooter.vue";
+
+export default {
+  components: {
+    AppHeader,
+    DarkCoffe,
+    ColdCoffee,
+    HotCoffee,
+    // GiftCoffee,
+    // AboutUs,
+    // CustomerReviews,
+    // OurPranches,
+    // EndFooter,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "../src/assets/style/_variables.scss";
 </style>

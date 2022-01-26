@@ -3,6 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+// Package
+import "popper.js";
+import "jquery";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 Vue.config.productionTip = false;
 
 new Vue({
